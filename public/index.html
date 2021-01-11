@@ -1,12 +1,127 @@
-<html>
-  <head>
-    <title>node.js http server</title>
-  </head>
-  <body>
 
-    <h1>Serving up static files like they were turtles strapped to rockets.</h1>
+                <style>
+                    table {
+                        width: 100%;
+                    }
 
-    <img src="./img/turtle.png"/>
-  </body>
-</html>
+                    #tableWrapper {
+                        width: 100%;
+                        overflow-y: auto;
+                        _overflow: auto;
+                    }
 
+                    .tableGen {
+                        table-layout: fixed;
+                        border-collapse: collapse;
+                        margin-bottom: 20px;
+                    }
+
+                        .tableGen tr {
+                            border-bottom: 1px solid #ccc;
+                            padding: 5px;
+                        }
+
+                        .tableGen tbody tr:first-child {
+                            background-color: #EEE;
+                            border-bottom: 1px solid #ccc;
+                            font-weight: bold;
+                            padding: 5px;
+                            text-align: left;
+                        }
+
+                        .tableGen tr.hlDeepBlue {
+                            background-color: #0F2236 !important;
+                            color: #fff !important;
+                            font-weight: bold !important;
+                        }
+
+                        .tableGen tr.hlOrange {
+                            background-color: #ef7f1b !important;
+                            color: #fff !important;
+                            font-weight: bold !important;
+                        }
+
+                        .tableGen tr.hlBlue {
+                            background-color: #0a7dac !important;
+                            color: #fff !important;
+                            font-weight: bold !important;
+                        }
+
+                        .tableGen tr.hlLightBlue {
+                            background-color: #dceefa !important;
+                            color: #0a7dac !important;
+                            font-weight: bold !important;
+                        }
+
+                        .tableGen tr td {
+                            padding: 5px;
+                            text-align: left;
+                            border: 1px solid black;
+                            height: 25px;
+                        }
+                </style>
+
+                <div id="tableWrapper"><table class="tableGen">
+<tbody>
+<tr><td>テストケース</td><td></td><td></td><td></td><td>テストレポート</td></tr>
+
+<tr><td>低圧</td><td>受付→スイッチング開始</td><td>IF_10110</td><td>設備情報照会</td><td>受付開始_低圧.html</td></tr>
+
+<tr><td>低圧</td><td></td><td>IS_20110</td><td>スイッチング廃止取次登録</td><td></td></tr>
+
+<tr><td>低圧</td><td></td><td>IS_20210</td><td>スイッチング廃止取次結果照会</td><td></td></tr>
+
+<tr><td>低圧</td><td></td><td>IF_10610</td><td>スイッチング開始申請</td><td></td></tr>
+
+<tr><td>低圧</td><td></td><td>IF_10620</td><td>業務処理状況確認(スイッチング開始申請)</td><td></td></tr>
+
+<tr><td>低圧</td><td>受付→再点</td><td>IF_10410</td><td>再点</td><td></td></tr>
+
+<tr><td>低圧</td><td></td><td>IF_10420</td><td>業務処理状況確認(再点)</td><td></td></tr>
+
+<tr><td>低圧</td><td>需要者情報変更</td><td>IF_10810</td><td>需要者情報変更</td><td>需要者情報変更_低圧.html</td></tr>
+
+<tr><td>低圧</td><td></td><td>IF_10820</td><td>業務処理状況確認(需要者情報変更)</td><td></td></tr>
+
+<tr><td>低圧</td><td>アンペア変更</td><td>IF_10910</td><td>アンペア変更</td><td></td></tr>
+
+<tr><td>低圧</td><td></td><td>IF_10920</td><td>業務処理状況確認(アンペア変更)</td><td></td></tr>
+
+<tr><td>低圧</td><td>廃止・撤去</td><td>IF_10510</td><td>廃止・撤去</td><td></td></tr>
+
+<tr><td>低圧</td><td></td><td>IF_10520</td><td>業務処理状況確認(廃止・撤去)</td><td></td></tr>
+
+<tr><td>低圧</td><td>スイッチング廃止承認 </td><td>IS_20310</td><td>スイッチング廃止取次照会</td><td></td></tr>
+
+<tr><td>低圧</td><td></td><td>IS_20410</td><td>スイッチング廃止取次判断</td><td></td></tr>
+
+<tr><td>低圧</td><td></td><td>IF_10710</td><td>スイッチング廃止申請</td><td></td></tr>
+
+<tr><td>低圧</td><td></td><td>IF_10720</td><td>業務処理状況確認(スイッチング廃止申請)</td><td></td></tr>
+
+<tr><td>高圧</td><td>受付→スイッチング開始</td><td>IS_K20110</td><td>スイッチング廃止取次登録</td><td></td></tr>
+
+<tr><td>高圧</td><td></td><td>IS_K20210</td><td>スイッチング廃止取次結果照会</td><td></td></tr>
+
+<tr><td>高圧</td><td></td><td>IF_K10610</td><td>スイッチング開始申請</td><td></td></tr>
+
+<tr><td>高圧</td><td></td><td>IF_K10620</td><td>業務処理状況確認(スイッチング開始申請)</td><td></td></tr>
+
+<tr><td>高圧</td><td>需要者情報変更</td><td>IF_K10810</td><td>需要者情報変更</td><td></td></tr>
+
+<tr><td>高圧</td><td></td><td>IF_K10820</td><td>業務処理状況確認(需要者情報変更)</td><td></td></tr>
+
+<tr><td>高圧</td><td>廃止・撤去</td><td>IF_K10510</td><td>廃止・撤去</td><td></td></tr>
+
+<tr><td>高圧</td><td></td><td>IF_K10520</td><td>業務処理状況確認(廃止・撤去)</td><td></td></tr>
+
+<tr><td>高圧</td><td>スイッチング廃止承認 </td><td>IS_K20310</td><td>スイッチング廃止取次照会</td><td></td></tr>
+
+<tr><td>高圧</td><td></td><td>IS_K20410</td><td>スイッチング廃止取次判断</td><td></td></tr>
+
+<tr><td>高圧</td><td></td><td>IF_K10710</td><td>スイッチング廃止申請</td><td></td></tr>
+
+<tr><td>高圧</td><td></td><td>IF_K10720</td><td>業務処理状況確認(スイッチング廃止申請)</td><td></td></tr>
+
+</tbody></table></div>
+            
